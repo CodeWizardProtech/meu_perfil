@@ -1,13 +1,29 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Github, Instagram, Linkedin, MessageCircle, Rocket, Code2, Users, Trophy, ChevronRight } from "lucide-react";
+import {
+  Github,
+  Instagram,
+  Linkedin,
+  MessageCircle,
+  Rocket,
+  Code2,
+  Users,
+  Trophy,
+  ChevronRight,
+} from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import instagramPreview from "@/assets/insta.jpg";
+import linkedinPreview from "@/assets/linkedin.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
       { title: "Marcos Roberto — Desenvolvedor de IA e Automação" },
-      { name: "description", content: "Transformo ideias em soluções reais com código, dados e inteligência. IA, Automação, APIs e Python." },
+      {
+        name: "description",
+        content:
+          "Transformo ideias em soluções reais com código, dados e inteligência. IA, Automação, APIs e Python.",
+      },
     ],
   }),
 });
@@ -22,24 +38,30 @@ const links = [
     cta: "ACESSAR GITHUB",
     href: "https://github.com",
     preview: (
-      <div className="rounded-md bg-[#0d0d0d] border border-border/40 p-3 font-mono text-[10px] leading-relaxed overflow-hidden">
+      <div className="rounded-md bg-[#0d0d0d] border border-border/40 p-3 font-mono text-[10px] leading-relaxed overflow-hidden h-[130px]">
         <div className="flex gap-1.5 mb-2">
           <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
           <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
           <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
         </div>
-        <pre className="text-gold/90"><span className="text-pink-400">import</span> pandas <span className="text-pink-400">as</span> pd
-<span className="text-pink-400">from</span> sklearn.ensemble <span className="text-pink-400">import</span> RandomForest
-<span className="text-pink-400">from</span> sklearn.metrics <span className="text-pink-400">import</span> accuracy
-
-<span className="text-muted-foreground"># Carrega os dados</span>
-df = pd.read_csv(<span className="text-green-400">"dados.csv"</span>)
-X = df.drop(<span className="text-green-400">"target"</span>, axis=1)
-y = df[<span className="text-green-400">"target"</span>]
-
-model = RandomForest()
-model.fit(X_train, y_train)
-print(<span className="text-green-400">"Acurácia:"</span>, score)</pre>
+        <div className="overflow-hidden">
+          <pre className="text-gold/90 scale-[0.76] origin-top-left w-[140%]">
+            <span className="text-pink-400">import</span> pandas{" "}
+            <span className="text-pink-400">as</span> pd{"\n"}
+            <span className="text-pink-400">from</span> sklearn.ensemble{" "}
+            <span className="text-pink-400">import</span> RandomForest{"\n"}
+            <span className="text-pink-400">from</span> sklearn.metrics{" "}
+            <span className="text-pink-400">import</span> accuracy{"\n"}
+            <span className="text-muted-foreground"># Carrega os dados</span>
+            {"\n"}
+            df = pd.read_csv(<span className="text-green-400">"dados.csv"</span>){"\n"}X = df.drop(
+            <span className="text-green-400">"target"</span>, axis=1){"\n"}y = df[
+            <span className="text-green-400">"target"</span>]{"\n"}
+            model = RandomForest(){"\n"}
+            model.fit(X_train, y_train){"\n"}
+            print(<span className="text-green-400">"Acurácia:"</span>, score)
+          </pre>
+        </div>
       </div>
     ),
   },
@@ -50,21 +72,11 @@ print(<span className="text-green-400">"Acurácia:"</span>, score)</pre>
     cta: "IR PARA O INSTAGRAM",
     href: "https://instagram.com",
     preview: (
-      <div className="rounded-xl bg-[#0d0d0d] border border-border/40 p-3">
-        <div className="text-[10px] text-muted-foreground mb-2">marcosroberto.dev</div>
-        <div className="flex items-center gap-2 mb-2">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gold to-gold-bright/60" />
-          <div className="flex-1">
-            <div className="text-[10px] font-semibold">Marcos Roberto</div>
-            <div className="text-[8px] text-muted-foreground">Dev IA & Automação</div>
-          </div>
-        </div>
-        <div className="grid grid-cols-3 gap-1">
-          {[...Array(6)].map((_, i) => (
-            <div key={i} className="aspect-square rounded bg-gradient-to-br from-gold/30 to-card" />
-          ))}
-        </div>
-      </div>
+      <img
+        src={instagramPreview}
+        alt="Instagram Profile"
+        className="rounded-xl w-[140px] h-auto object-cover"
+      />
     ),
   },
   {
@@ -80,7 +92,8 @@ print(<span className="text-green-400">"Acurácia:"</span>, score)</pre>
           <div>
             <div className="text-[10px] font-semibold">Marcos Roberto</div>
             <div className="text-[8px] text-green-400 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse-dot" />Online
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse-dot" />
+              Online
             </div>
           </div>
         </div>
@@ -98,20 +111,27 @@ print(<span className="text-green-400">"Acurácia:"</span>, score)</pre>
     cta: "VER PERFIL",
     href: "https://linkedin.com",
     preview: (
-      <div className="rounded-xl bg-[#0d0d0d] border border-border/40 overflow-hidden">
-        <div className="h-10 bg-gradient-to-r from-blue-900/40 via-gold/20 to-blue-900/40" />
-        <div className="p-3 -mt-4">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-gold-bright/60 border-2 border-card mb-1" />
-          <div className="text-[10px] font-semibold">Marcos Roberto</div>
-          <div className="text-[8px] text-muted-foreground">Desenvolvedor de IA e Automação</div>
-          <div className="text-[8px] text-gold mt-1">Automação · IA · Dados · APIs</div>
-        </div>
-      </div>
+      <img
+        src={linkedinPreview}
+        alt="LinkedIn Profile"
+        className="rounded-xl w-[170px] h-[160px] scale-down"
+      />
     ),
   },
 ];
 
-const techs = ["Python", "IA & Machine Learning", "Automação", "APIs", "SQL", "Data Analytics", "Linux", "Git", "Docker", "FastAPI"];
+const techs = [
+  "Python",
+  "IA & Machine Learning",
+  "Automação",
+  "APIs",
+  "SQL",
+  "Data Analytics",
+  "Linux",
+  "Git",
+  "Docker",
+  "FastAPI",
+];
 
 const stats = [
   { Icon: Rocket, value: "+50", label: "Projetos\nDesenvolvidos" },
@@ -125,17 +145,28 @@ function Index() {
     <main className="min-h-screen bg-background pb-12">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
 
       <div className="max-w-xl mx-auto px-4">
         {/* HERO */}
         <header className="relative pt-6">
-          <div className="relative rounded-b-3xl overflow-hidden aspect-[3/4] sm:aspect-[4/5]">
-            <img src={heroImg} alt="Marcos Roberto" width={1024} height={1024} className="w-full h-full object-cover object-top" />
+          <div className="relative rounded-b-3xl overflow-hidden aspect-[3/4] sm:aspect-[2/1]">
+            <img
+              src={heroImg}
+              alt="Marcos Roberto"
+              width={1418}
+              height={752}
+              className="w-full h-full object-cover object-top"
+            />
             <div className="absolute inset-0" style={{ background: "var(--gradient-hero-fade)" }} />
             <div className="absolute bottom-0 left-0 right-0 px-6 pb-6 text-center animate-fade-up">
               <h1 className="font-display text-gradient-gold text-5xl sm:text-6xl font-semibold leading-[0.95]">
-                MARCOS<br />ROBERTO
+                MARCOS
+                <br />
+                ROBERTO
               </h1>
               <p className="mt-3 text-gold text-[11px] tracking-[0.3em] font-medium">
                 DESENVOLVEDOR DE IA E AUTOMAÇÃO
@@ -145,7 +176,9 @@ function Index() {
 
           <div className="text-center px-4 pt-6 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             <p className="text-foreground/90 text-base">
-              Transformo ideias em soluções reais com código,<br />dados e inteligência.
+              Transformo ideias em soluções reais com código,
+              <br />
+              dados e inteligência.
             </p>
             <div className="mt-5 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[11px] tracking-widest font-semibold">
               {tags.map((t, i) => (
@@ -169,7 +202,7 @@ function Index() {
               className="card-premium block rounded-2xl p-5 animate-fade-up"
               style={{ animationDelay: `${0.1 * i}s` }}
             >
-              <div className="grid grid-cols-[auto_1fr_auto] sm:grid-cols-[auto_1fr_140px] gap-4 items-center">
+              <div className="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_140px] gap-4">
                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-gold/20 to-transparent border border-gold/30 animate-float">
                   <Icon className="w-8 h-8 text-gold" strokeWidth={1.5} />
                 </div>
@@ -181,7 +214,7 @@ function Index() {
                     <ChevronRight className="w-3 h-3" />
                   </button>
                 </div>
-                <div className="hidden sm:block w-[140px]">{preview}</div>
+                <div className="col-span-2 sm:col-span-1 w-full sm:w-[140px]">{preview}</div>
               </div>
             </a>
           ))}
@@ -211,7 +244,9 @@ function Index() {
               <div key={label} className="flex flex-col items-center gap-2">
                 <Icon className="w-7 h-7 text-gold" strokeWidth={1.5} />
                 {value && <div className="text-gold font-bold text-sm">{value}</div>}
-                <div className="text-[10px] sm:text-xs text-foreground whitespace-pre-line leading-tight">{label}</div>
+                <div className="text-[10px] sm:text-xs text-foreground whitespace-pre-line leading-tight">
+                  {label}
+                </div>
               </div>
             ))}
           </div>
@@ -223,7 +258,11 @@ function Index() {
           <p>Contato: marcos@devdatascience.com</p>
           <div className="border-t border-border/40 mt-4 pt-4 flex justify-center gap-6">
             {[Github, Instagram, Linkedin, MessageCircle].map((I, i) => (
-              <a key={i} href="#" className="text-muted-foreground hover:text-gold transition-colors hover:scale-110 inline-block">
+              <a
+                key={i}
+                href="#"
+                className="text-muted-foreground hover:text-gold transition-colors hover:scale-110 inline-block"
+              >
                 <I className="w-5 h-5" />
               </a>
             ))}
