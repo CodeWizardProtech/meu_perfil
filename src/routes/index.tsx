@@ -75,7 +75,7 @@ const links = [
       <img
         src={instagramPreview}
         alt="Instagram Profile"
-        className="rounded-xl w-[140px] h-auto object-cover"
+        className="rounded-xl w-full sm:w-[140px] h-auto object-cover"
       />
     ),
   },
@@ -114,7 +114,7 @@ const links = [
       <img
         src={linkedinPreview}
         alt="LinkedIn Profile"
-        className="rounded-xl w-[170px] h-[160px] scale-down"
+        className="rounded-xl w-full sm:w-[170px] h-auto object-cover"
       />
     ),
   },
