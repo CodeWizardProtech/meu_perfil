@@ -216,7 +216,7 @@ function Index() {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative rounded-2xl overflow-hidden block w-full h-400 sm:h-[320px] group object-cover"
+            className="relative rounded-2xl overflow-hidden block w-full h-600 sm:h-[320px] group object-cover"
           >
             <img
               src={instagramPreview}
