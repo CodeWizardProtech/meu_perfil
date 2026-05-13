@@ -212,12 +212,12 @@ function Index() {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative rounded-2xl overflow-hidden block h-100 w-100 sm:flex sm:justify-center group"
+            className="relative rounded-2xl overflow-hidden block h-48 group"
           >
             <img
               src={instagramPreview}
               alt="Instagram"
-              className="w-full h-full  object-contain object-center transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover object-top sm:object-center transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex items-center justify-between px-6">
