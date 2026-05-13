@@ -46,13 +46,17 @@ const links = [
         </div>
         <div className="overflow-hidden">
           <pre className="text-gold/90 scale-[0.76] origin-top-left w-[140%]">
-            <span className="text-pink-400">import</span> pandas <span className="text-pink-400">as</span> pd{"\n"}
-            <span className="text-pink-400">from</span> sklearn.ensemble <span className="text-pink-400">import</span> RandomForest{"\n"}
-            <span className="text-pink-400">from</span> sklearn.metrics <span className="text-pink-400">import</span> accuracy{"\n"}
-            <span className="text-muted-foreground"># Load data</span>{"\n"}
-            df = pd.read_csv(<span className="text-green-400">"dados.csv"</span>){"\n"}
-            X = df.drop(<span className="text-green-400">"target"</span>, axis=1){"\n"}
-            y = df[<span className="text-green-400">"target"</span>]{"\n"}
+            <span className="text-pink-400">import</span> pandas{" "}
+            <span className="text-pink-400">as</span> pd{"\n"}
+            <span className="text-pink-400">from</span> sklearn.ensemble{" "}
+            <span className="text-pink-400">import</span> RandomForest{"\n"}
+            <span className="text-pink-400">from</span> sklearn.metrics{" "}
+            <span className="text-pink-400">import</span> accuracy{"\n"}
+            <span className="text-muted-foreground"># Load data</span>
+            {"\n"}
+            df = pd.read_csv(<span className="text-green-400">"dados.csv"</span>){"\n"}X = df.drop(
+            <span className="text-green-400">"target"</span>, axis=1){"\n"}y = df[
+            <span className="text-green-400">"target"</span>]{"\n"}
             model = RandomForest(){"\n"}
             model.fit(X_train, y_train){"\n"}
             print(<span className="text-green-400">"Acurácia:"</span>, score)
@@ -212,17 +216,17 @@ function Index() {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative rounded-2xl overflow-hidden block h-100 w-100 group"
+            className="relative rounded-2xl overflow-hidden block w-full h-72 sm:h-[320px] group"
           >
             <img
               src={instagramPreview}
               alt="Instagram"
-              className="w-full h-full  object-contain object-center transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex items-center justify-between px-6">
               <div>
-                <div className="flex items-center gap-2 mb-1 w-[1000px] mx-auto">
+                <div className="flex items-center gap-2 mb-1">
                   <Instagram className="w-5 h-5 text-gold" />
                   <span className="text-white font-bold text-base tracking-wider">INSTAGRAM</span>
                 </div>
