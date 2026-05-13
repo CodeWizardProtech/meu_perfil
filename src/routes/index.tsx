@@ -18,24 +18,24 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Marcos Roberto — Desenvolvedor de IA e Automação" },
+      { title: "Marcos Roberto — AI & Automation Developer" },
       {
         name: "description",
         content:
-          "Transformo ideias em soluções reais com código, dados e inteligência. IA, Automação, APIs e Python.",
+          "I turn ideas into real solutions with code, data and intelligence. AI, Automation, APIs and Python.",
       },
     ],
   }),
 });
 
-const tags = ["IA", "AUTOMAÇÃO", "DADOS", "APIs", "PYTHON"];
+const tags = ["AI", "AUTOMATION", "DATA", "APIs", "PYTHON"];
 
 const links = [
   {
     name: "GITHUB",
     Icon: Github,
-    desc: "Projetos, automações e soluções desenvolvidas na prática.",
-    cta: "ACESSAR GITHUB",
+    desc: "Projects, automations and solutions built in practice.",
+    cta: "ACCESS GITHUB",
     href: "https://github.com",
     preview: (
       <div className="rounded-md bg-[#0d0d0d] border border-border/40 p-3 font-mono text-[10px] leading-relaxed overflow-hidden h-[130px]">
@@ -49,7 +49,7 @@ const links = [
             <span className="text-pink-400">import</span> pandas <span className="text-pink-400">as</span> pd{"\n"}
             <span className="text-pink-400">from</span> sklearn.ensemble <span className="text-pink-400">import</span> RandomForest{"\n"}
             <span className="text-pink-400">from</span> sklearn.metrics <span className="text-pink-400">import</span> accuracy{"\n"}
-            <span className="text-muted-foreground"># Carrega os dados</span>{"\n"}
+            <span className="text-muted-foreground"># Load data</span>{"\n"}
             df = pd.read_csv(<span className="text-green-400">"dados.csv"</span>){"\n"}
             X = df.drop(<span className="text-green-400">"target"</span>, axis=1){"\n"}
             y = df[<span className="text-green-400">"target"</span>]{"\n"}
@@ -64,16 +64,16 @@ const links = [
   {
     name: "INSTAGRAM",
     Icon: Instagram,
-    desc: "Conteúdos sobre tecnologia, IA, automação e bastidores dos projetos.",
-    cta: "IR PARA O INSTAGRAM",
+    desc: "Content about technology, AI, automation and behind the scenes.",
+    cta: "GO TO INSTAGRAM",
     href: "https://instagram.com",
     preview: null,
   },
   {
     name: "WHATSAPP",
     Icon: MessageCircle,
-    desc: "Contato direto para projetos, parcerias e oportunidades.",
-    cta: "FALAR COMIGO",
+    desc: "Direct contact for projects, partnerships and opportunities.",
+    cta: "TALK TO ME",
     href: "https://wa.me/",
     preview: (
       <div className="rounded-xl bg-[#0d0d0d] border border-border/40 p-3 space-y-2">
@@ -88,7 +88,7 @@ const links = [
           </div>
         </div>
         <div className="bg-secondary/60 rounded-lg rounded-tl-none p-2 text-[10px] max-w-[85%]">
-          Olá! Como posso ajudar no seu projeto?
+          Hello! How can I help with your project?
           <div className="text-[8px] text-muted-foreground text-right mt-1">17:30</div>
         </div>
       </div>
@@ -97,8 +97,8 @@ const links = [
   {
     name: "LINKEDIN",
     Icon: Linkedin,
-    desc: "Conecte-se e acompanhe minha jornada profissional.",
-    cta: "VER PERFIL",
+    desc: "Connect and follow my professional journey.",
+    cta: "VIEW PROFILE",
     href: "https://linkedin.com",
     preview: null,
   },
@@ -106,8 +106,8 @@ const links = [
 
 const techs = [
   "Python",
-  "IA & Machine Learning",
-  "Automação",
+  "AI & Machine Learning",
+  "Automation",
   "APIs",
   "SQL",
   "Data Analytics",
@@ -118,10 +118,10 @@ const techs = [
 ];
 
 const stats = [
-  { Icon: Rocket, value: "+50", label: "Projetos\nDesenvolvidos" },
+  { Icon: Rocket, value: "+50", label: "Projects\nDeveloped" },
   { Icon: Code2, value: "", label: "IA + Machine\nLearning" },
-  { Icon: Users, value: "", label: "Soluções\nReais" },
-  { Icon: Trophy, value: "", label: "Foco em\nResultados" },
+  { Icon: Users, value: "", label: "Real\nSolutions" },
+  { Icon: Trophy, value: "", label: "Focus on\nResults" },
 ];
 
 function Index() {
@@ -153,16 +153,16 @@ function Index() {
                 ROBERTO
               </h1>
               <p className="mt-3 text-gold text-[11px] tracking-[0.3em] font-medium">
-                DESENVOLVEDOR DE IA E AUTOMAÇÃO
+                AI & AUTOMATION DEVELOPER
               </p>
             </div>
           </div>
 
           <div className="text-center px-4 pt-6 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             <p className="text-foreground/90 text-base">
-              Transformo ideias em soluções reais com código,
+              I turn ideas into real solutions with code,
               <br />
-              dados e inteligência.
+              data and intelligence.
             </p>
             <div className="mt-5 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[11px] tracking-widest font-semibold">
               {tags.map((t, i) => (
@@ -212,7 +212,7 @@ function Index() {
         {/* GALERIA DE REDES */}
         <section className="mt-8 animate-fade-up space-y-4">
           <h2 className="text-center text-gold font-bold tracking-widest text-sm">
-            MINHAS REDES
+            MY NETWORKS
           </h2>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden block h-100 w-100 group">
             <img src={instagramPreview} alt="Instagram" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
@@ -247,7 +247,7 @@ function Index() {
         {/* TECH */}
         <section className="card-premium mt-8 rounded-2xl p-6 animate-fade-up">
           <h2 className="text-center text-gold font-bold tracking-widest text-sm mb-5">
-            TECNOLOGIAS E ESPECIALIDADES
+            TECHNOLOGIES & SPECIALTIES
           </h2>
           <div className="flex flex-wrap justify-center gap-2">
             {techs.map((t) => (
@@ -278,8 +278,8 @@ function Index() {
 
         {/* FOOTER */}
         <footer className="mt-10 pt-6 text-center text-sm text-muted-foreground space-y-1">
-          <p>Todos os direitos reservados ao MR Oliveira ©.</p>
-          <p>Contato: marcos@devdatascience.com</p>
+          <p>All rights reserved to MR Oliveira ©.</p>
+          <p>Contact: marcos@devdatascience.com</p>
           <div className="border-t border-border/40 mt-4 pt-4 flex justify-center gap-6">
             {[Github, Instagram, Linkedin, MessageCircle].map((I, i) => (
               <a
