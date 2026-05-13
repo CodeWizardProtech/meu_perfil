@@ -37,33 +37,6 @@ const links = [
     desc: "Projetos, automações e soluções desenvolvidas na prática.",
     cta: "ACESSAR GITHUB",
     href: "https://github.com",
-    preview: (
-      <div className="rounded-md bg-[#0d0d0d] border border-border/40 p-3 font-mono text-[10px] leading-relaxed overflow-hidden h-[130px]">
-        <div className="flex gap-1.5 mb-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-          <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-          <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-        </div>
-        <div className="overflow-hidden">
-          <pre className="text-gold/90 scale-[0.76] origin-top-left w-[140%]">
-            <span className="text-pink-400">import</span> pandas{" "}
-            <span className="text-pink-400">as</span> pd{"\n"}
-            <span className="text-pink-400">from</span> sklearn.ensemble{" "}
-            <span className="text-pink-400">import</span> RandomForest{"\n"}
-            <span className="text-pink-400">from</span> sklearn.metrics{" "}
-            <span className="text-pink-400">import</span> accuracy{"\n"}
-            <span className="text-muted-foreground"># Carrega os dados</span>
-            {"\n"}
-            df = pd.read_csv(<span className="text-green-400">"dados.csv"</span>){"\n"}X = df.drop(
-            <span className="text-green-400">"target"</span>, axis=1){"\n"}y = df[
-            <span className="text-green-400">"target"</span>]{"\n"}
-            model = RandomForest(){"\n"}
-            model.fit(X_train, y_train){"\n"}
-            print(<span className="text-green-400">"Acurácia:"</span>, score)
-          </pre>
-        </div>
-      </div>
-    ),
   },
   {
     name: "INSTAGRAM",
@@ -71,13 +44,6 @@ const links = [
     desc: "Conteúdos sobre tecnologia, IA, automação e bastidores dos projetos.",
     cta: "IR PARA O INSTAGRAM",
     href: "https://instagram.com",
-    preview: (
-      <img
-        src={instagramPreview}
-        alt="Instagram Profile"
-        className="rounded-xl w-full sm:w-[140px] h-auto object-cover"
-      />
-    ),
   },
   {
     name: "WHATSAPP",
@@ -85,24 +51,6 @@ const links = [
     desc: "Contato direto para projetos, parcerias e oportunidades.",
     cta: "FALAR COMIGO",
     href: "https://wa.me/",
-    preview: (
-      <div className="rounded-xl bg-[#0d0d0d] border border-border/40 p-3 space-y-2">
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-full bg-gradient-to-br from-gold to-gold-bright/60" />
-          <div>
-            <div className="text-[10px] font-semibold">Marcos Roberto</div>
-            <div className="text-[8px] text-green-400 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse-dot" />
-              Online
-            </div>
-          </div>
-        </div>
-        <div className="bg-secondary/60 rounded-lg rounded-tl-none p-2 text-[10px] max-w-[85%]">
-          Olá! Como posso ajudar no seu projeto?
-          <div className="text-[8px] text-muted-foreground text-right mt-1">17:30</div>
-        </div>
-      </div>
-    ),
   },
   {
     name: "LINKEDIN",
@@ -110,13 +58,6 @@ const links = [
     desc: "Conecte-se e acompanhe minha jornada profissional.",
     cta: "VER PERFIL",
     href: "https://linkedin.com",
-    preview: (
-      <img
-        src={linkedinPreview}
-        alt="LinkedIn Profile"
-        className="rounded-xl w-full sm:w-[170px] h-auto object-cover"
-      />
-    ),
   },
 ];
 
@@ -193,7 +134,7 @@ function Index() {
 
         {/* LINK CARDS */}
         <section className="mt-10 space-y-5">
-          {links.map(({ name, Icon, desc, cta, href, preview }, i) => (
+          {links.map(({ name, Icon, desc, cta, href }, i) => (
             <a
               key={name}
               href={href}
@@ -202,8 +143,8 @@ function Index() {
               className="card-premium block rounded-2xl p-5 animate-fade-up"
               style={{ animationDelay: `${0.1 * i}s` }}
             >
-              <div className="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_140px] gap-4">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-gold/20 to-transparent border border-gold/30 animate-float">
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-gold/20 to-transparent border border-gold/30 animate-float shrink-0">
                   <Icon className="w-8 h-8 text-gold" strokeWidth={1.5} />
                 </div>
                 <div>
@@ -214,10 +155,46 @@ function Index() {
                     <ChevronRight className="w-3 h-3" />
                   </button>
                 </div>
-                <div className="col-span-2 sm:col-span-1 w-full sm:w-[140px]">{preview}</div>
               </div>
             </a>
           ))}
+        </section>
+
+        {/* GALERIA DE REDES */}
+        <section className="mt-8 animate-fade-up">
+          <h2 className="text-center text-gold font-bold tracking-widest text-sm mb-4">
+            MINHAS REDES
+          </h2>
+          <div className="grid grid-cols-2 gap-4">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden aspect-[4/5] group">
+              <img src={instagramPreview} alt="Instagram" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 flex items-center justify-between">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <Instagram className="w-4 h-4 text-gold" />
+                    <span className="text-white font-bold text-sm tracking-wider">INSTAGRAM</span>
+                  </div>
+                  <p className="text-white/60 text-[10px] mt-0.5">@marcosroberto.dev</p>
+                </div>
+                <ChevronRight className="w-4 h-4 text-gold" />
+              </div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden aspect-[4/5] group">
+              <img src={linkedinPreview} alt="LinkedIn" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 flex items-center justify-between">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <Linkedin className="w-4 h-4 text-gold" />
+                    <span className="text-white font-bold text-sm tracking-wider">LINKEDIN</span>
+                  </div>
+                  <p className="text-white/60 text-[10px] mt-0.5">Marcos Roberto</p>
+                </div>
+                <ChevronRight className="w-4 h-4 text-gold" />
+              </div>
+            </a>
+          </div>
         </section>
 
         {/* TECH */}
