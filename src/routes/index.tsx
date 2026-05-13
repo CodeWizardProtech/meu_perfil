@@ -18,24 +18,24 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Marcos Roberto — Desenvolvedor de IA e Automação" },
+      { title: "Marcos Roberto — AI & Automation Developer" },
       {
         name: "description",
         content:
-          "Transformo ideias em soluções reais com código, dados e inteligência. IA, Automação, APIs e Python.",
+          "I turn ideas into real solutions with code, data and intelligence. AI, Automation, APIs and Python.",
       },
     ],
   }),
 });
 
-const tags = ["IA", "AUTOMAÇÃO", "DADOS", "APIs", "PYTHON"];
+const tags = ["AI", "AUTOMATION", "DATA", "APIs", "PYTHON"];
 
 const links = [
   {
     name: "GITHUB",
     Icon: Github,
-    desc: "Projetos, automações e soluções desenvolvidas na prática.",
-    cta: "ACESSAR GITHUB",
+    desc: "Projects, automations and solutions built in practice.",
+    cta: "ACCESS GITHUB",
     href: "https://github.com",
     preview: (
       <div className="rounded-md bg-[#0d0d0d] border border-border/40 p-3 font-mono text-[10px] leading-relaxed overflow-hidden h-[130px]">
@@ -49,7 +49,7 @@ const links = [
             <span className="text-pink-400">import</span> pandas <span className="text-pink-400">as</span> pd{"\n"}
             <span className="text-pink-400">from</span> sklearn.ensemble <span className="text-pink-400">import</span> RandomForest{"\n"}
             <span className="text-pink-400">from</span> sklearn.metrics <span className="text-pink-400">import</span> accuracy{"\n"}
-            <span className="text-muted-foreground"># Carrega os dados</span>{"\n"}
+            <span className="text-muted-foreground"># Load data</span>{"\n"}
             df = pd.read_csv(<span className="text-green-400">"dados.csv"</span>){"\n"}
             X = df.drop(<span className="text-green-400">"target"</span>, axis=1){"\n"}
             y = df[<span className="text-green-400">"target"</span>]{"\n"}
@@ -64,16 +64,18 @@ const links = [
   {
     name: "INSTAGRAM",
     Icon: Instagram,
-    desc: "Conteúdos sobre tecnologia, IA, automação e bastidores dos projetos.",
-    cta: "IR PARA O INSTAGRAM",
+    desc: "Content about technology, AI, automation and behind the scenes.",
+    cta: "GO TO INSTAGRAM",
     href: "https://instagram.com",
-    preview: null,
+    preview: (
+      <img src={instagramPreview} alt="Instagram" className="rounded-xl w-full h-full object-cover" />
+    ),
   },
   {
     name: "WHATSAPP",
     Icon: MessageCircle,
-    desc: "Contato direto para projetos, parcerias e oportunidades.",
-    cta: "FALAR COMIGO",
+    desc: "Direct contact for projects, partnerships and opportunities.",
+    cta: "TALK TO ME",
     href: "https://wa.me/",
     preview: (
       <div className="rounded-xl bg-[#0d0d0d] border border-border/40 p-3 space-y-2">
@@ -88,7 +90,7 @@ const links = [
           </div>
         </div>
         <div className="bg-secondary/60 rounded-lg rounded-tl-none p-2 text-[10px] max-w-[85%]">
-          Olá! Como posso ajudar no seu projeto?
+          Hello! How can I help with your project?
           <div className="text-[8px] text-muted-foreground text-right mt-1">17:30</div>
         </div>
       </div>
@@ -97,17 +99,19 @@ const links = [
   {
     name: "LINKEDIN",
     Icon: Linkedin,
-    desc: "Conecte-se e acompanhe minha jornada profissional.",
-    cta: "VER PERFIL",
+    desc: "Connect and follow my professional journey.",
+    cta: "VIEW PROFILE",
     href: "https://linkedin.com",
-    preview: null,
+    preview: (
+      <img src={linkedinPreview} alt="LinkedIn" className="rounded-xl w-full h-full object-cover object-top" />
+    ),
   },
 ];
 
 const techs = [
   "Python",
-  "IA & Machine Learning",
-  "Automação",
+  "AI & Machine Learning",
+  "Automation",
   "APIs",
   "SQL",
   "Data Analytics",
@@ -118,10 +122,10 @@ const techs = [
 ];
 
 const stats = [
-  { Icon: Rocket, value: "+50", label: "Projetos\nDesenvolvidos" },
-  { Icon: Code2, value: "+5 ANOS", label: "de Experiência" },
-  { Icon: Users, value: "", label: "Soluções\nReais" },
-  { Icon: Trophy, value: "", label: "Foco em\nResultados" },
+  { Icon: Rocket, value: "+50", label: "Projects\nDeveloped" },
+  { Icon: Code2, value: "+5 YEARS", label: "of Experience" },
+  { Icon: Users, value: "", label: "Real\nSolutions" },
+  { Icon: Trophy, value: "", label: "Focus on\nResults" },
 ];
 
 function Index() {
@@ -153,16 +157,16 @@ function Index() {
                 ROBERTO
               </h1>
               <p className="mt-3 text-gold text-[11px] tracking-[0.3em] font-medium">
-                DESENVOLVEDOR DE IA E AUTOMAÇÃO
+                AI & AUTOMATION DEVELOPER
               </p>
             </div>
           </div>
 
           <div className="text-center px-4 pt-6 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             <p className="text-foreground/90 text-base">
-              Transformo ideias em soluções reais com código,
+              I turn ideas into real solutions with code,
               <br />
-              dados e inteligência.
+              data and intelligence.
             </p>
             <div className="mt-5 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[11px] tracking-widest font-semibold">
               {tags.map((t, i) => (
@@ -186,11 +190,11 @@ function Index() {
               className="card-premium block rounded-2xl p-5 animate-fade-up"
               style={{ animationDelay: `${0.1 * i}s` }}
             >
-              <div className="flex items-center gap-4">
+              <div className="grid grid-cols-[auto_1fr_auto] sm:grid-cols-[auto_1fr_140px] gap-4 items-center">
                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-gold/20 to-transparent border border-gold/30 animate-float shrink-0">
                   <Icon className="w-8 h-8 text-gold" strokeWidth={1.5} />
                 </div>
-                <div className="flex-1">
+                <div>
                   <h3 className="text-gold font-bold tracking-wider text-lg">{name}</h3>
                   <p className="text-muted-foreground text-sm mt-1 leading-snug">{desc}</p>
                   <button className="btn-gold mt-3 inline-flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-bold tracking-wider">
@@ -198,56 +202,53 @@ function Index() {
                     <ChevronRight className="w-3 h-3" />
                   </button>
                 </div>
-                {preview && (
-                  <div className="hidden sm:block w-[140px] shrink-0">{preview}</div>
-                )}
+                <div className="hidden sm:block w-[140px]">{preview}</div>
               </div>
-              {preview && (
-                <div className="sm:hidden mt-4">{preview}</div>
-              )}
             </a>
           ))}
         </section>
 
         {/* GALERIA DE REDES */}
-        <section className="mt-8 animate-fade-up space-y-4">
-          <h2 className="text-center text-gold font-bold tracking-widest text-sm">
-            MINHAS REDES
+        <section className="mt-8 animate-fade-up">
+          <h2 className="text-center text-gold font-bold tracking-widest text-sm mb-4">
+            MY NETWORKS
           </h2>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden block h-48 group">
-            <img src={instagramPreview} alt="Instagram" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
-            <div className="absolute inset-0 flex items-center justify-between px-6">
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <Instagram className="w-5 h-5 text-gold" />
-                  <span className="text-white font-bold text-base tracking-wider">INSTAGRAM</span>
+          <div className="grid grid-cols-2 gap-4">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden aspect-[4/5] group">
+              <img src={instagramPreview} alt="Instagram" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 flex items-center justify-between">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <Instagram className="w-4 h-4 text-gold" />
+                    <span className="text-white font-bold text-sm tracking-wider">INSTAGRAM</span>
+                  </div>
+                  <p className="text-white/60 text-[10px] mt-0.5">@marcosroberto.dev</p>
                 </div>
-                <p className="text-white/60 text-xs">@marcosroberto.dev</p>
+                <ChevronRight className="w-4 h-4 text-gold" />
               </div>
-              <ChevronRight className="w-5 h-5 text-gold" />
-            </div>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden block h-48 group">
-            <img src={linkedinPreview} alt="LinkedIn" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
-            <div className="absolute inset-0 flex items-center justify-between px-6">
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <Linkedin className="w-5 h-5 text-gold" />
-                  <span className="text-white font-bold text-base tracking-wider">LINKEDIN</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden aspect-[4/5] group">
+              <img src={linkedinPreview} alt="LinkedIn" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 flex items-center justify-between">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <Linkedin className="w-4 h-4 text-gold" />
+                    <span className="text-white font-bold text-sm tracking-wider">LINKEDIN</span>
+                  </div>
+                  <p className="text-white/60 text-[10px] mt-0.5">Marcos Roberto</p>
                 </div>
-                <p className="text-white/60 text-xs">Marcos Roberto</p>
+                <ChevronRight className="w-4 h-4 text-gold" />
               </div>
-              <ChevronRight className="w-5 h-5 text-gold" />
-            </div>
-          </a>
+            </a>
+          </div>
         </section>
 
         {/* TECH */}
         <section className="card-premium mt-8 rounded-2xl p-6 animate-fade-up">
           <h2 className="text-center text-gold font-bold tracking-widest text-sm mb-5">
-            TECNOLOGIAS E ESPECIALIDADES
+            TECHNOLOGIES & SPECIALTIES
           </h2>
           <div className="flex flex-wrap justify-center gap-2">
             {techs.map((t) => (
@@ -278,8 +279,8 @@ function Index() {
 
         {/* FOOTER */}
         <footer className="mt-10 pt-6 text-center text-sm text-muted-foreground space-y-1">
-          <p>Todos os direitos reservados ao MR Oliveira ©.</p>
-          <p>Contato: marcos@devdatascience.com</p>
+          <p>All rights reserved to MR Oliveira ©.</p>
+          <p>Contact: marcos@devdatascience.com</p>
           <div className="border-t border-border/40 mt-4 pt-4 flex justify-center gap-6">
             {[Github, Instagram, Linkedin, MessageCircle].map((I, i) => (
               <a
