@@ -1,5 +1,0 @@
-import { w } from "./assets/worker-entry-UiASDJ1Q.js";
-import "node:events";
-export {
-  w as default
-};
