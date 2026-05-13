@@ -67,10 +67,10 @@ const links = [
     desc: "Content about technology, AI, automation and behind the scenes.",
     cta: "GO TO INSTAGRAM",
     href: "https://instagram.com",
-    preview: (
-      <img src={instagramPreview} alt="Instagram" className="rounded-xl w-full h-full object-cover" />
-    ),
+    preview: null,
   },
+  {
+    name: "WHATSAPP",
     Icon: MessageCircle,
     desc: "Direct contact for projects, partnerships and opportunities.",
     cta: "TALK TO ME",
@@ -100,9 +100,7 @@ const links = [
     desc: "Connect and follow my professional journey.",
     cta: "VIEW PROFILE",
     href: "https://linkedin.com",
-    preview: (
-      <img src={linkedinPreview} alt="LinkedIn" className="rounded-xl w-full h-full object-cover object-top" />
-    ),
+    preview: null,
   },
 ];
 
@@ -188,7 +186,7 @@ function Index() {
               className="card-premium block rounded-2xl p-5 animate-fade-up"
               style={{ animationDelay: `${0.1 * i}s` }}
             >
-              <div className="grid grid-cols-[auto_1fr_auto] sm:grid-cols-[auto_1fr_140px] gap-4 items-center">
+              <div className="flex items-center gap-4">
                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-gold/20 to-transparent border border-gold/30 animate-float shrink-0">
                   <Icon className="w-8 h-8 text-gold" strokeWidth={1.5} />
                 </div>
@@ -214,17 +212,17 @@ function Index() {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative rounded-2xl overflow-hidden block h-48 group"
+            className="relative rounded-2xl overflow-hidden block h-100 w-100 group"
           >
             <img
               src={instagramPreview}
               alt="Instagram"
-              className="w-full h-full object-cover object-top sm:object-center transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full  object-contain object-center transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex items-center justify-between px-6">
-              <div className="flex items-center gap-2 mb-1 w-50">>
-                <div>
+              <div>
+                <div className="flex items-center gap-2 mb-1 w-[600px] mx-auto">
                   <Instagram className="w-5 h-5 text-gold" />
                   <span className="text-white font-bold text-base tracking-wider">INSTAGRAM</span>
                 </div>
