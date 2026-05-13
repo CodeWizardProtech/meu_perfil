@@ -119,7 +119,7 @@ const techs = [
 
 const stats = [
   { Icon: Rocket, value: "+50", label: "Projetos\nDesenvolvidos" },
-  { Icon: Code2, value: "+5 ANOS", label: "de Experiência" },
+  { Icon: Code2, value: "IA + Machine\nLearning", label: "Data Science Journey" },
   { Icon: Users, value: "", label: "Soluções\nReais" },
   { Icon: Trophy, value: "", label: "Foco em\nResultados" },
 ];
