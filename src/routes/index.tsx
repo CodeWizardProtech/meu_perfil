@@ -143,7 +143,7 @@ function Index() {
               alt="Marcos Roberto"
               width={1418}
               height={752}
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-contain object-top"
             />
             <div className="absolute inset-0" style={{ background: "var(--gradient-hero-fade)" }} />
             <div className="absolute bottom-0 left-0 right-0 px-6 pb-6 text-center animate-fade-up">
