@@ -214,8 +214,8 @@ function Index() {
           <h2 className="text-center text-gold font-bold tracking-widest text-sm">
             MINHAS REDES
           </h2>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden block h-100 w-auto group">
-            <img src={instagramPreview} alt="Instagram" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden block h-100 w-100 group">
+            <img src={instagramPreview} alt="Instagram" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex items-center justify-between px-6">
               <div>
