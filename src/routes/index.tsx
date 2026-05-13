@@ -221,8 +221,8 @@ function Index() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex items-center justify-between px-6">
-              <div className="flex items-center gap-2 mb-1 w-[600px] mx-auto">
-                <div>
+              <div>
+                <div className="flex items-center gap-2 mb-1 w-[1000px] mx-auto">
                   <Instagram className="w-5 h-5 text-gold" />
                   <span className="text-white font-bold text-base tracking-wider">INSTAGRAM</span>
                 </div>
